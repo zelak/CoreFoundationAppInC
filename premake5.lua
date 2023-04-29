@@ -4,10 +4,10 @@ workspace "HelloWorld"
 
 project "HelloWorld"
    kind "ConsoleApp"
-   language "C"
+   language "C++"
    targetdir "bin/%{cfg.buildcfg}"
 
-   files { "**.h", "**.c" }
+   files { "**.h", "**.cpp" }
 
    filter "configurations:Debug"
       defines { "DEBUG" }
@@ -16,3 +16,6 @@ project "HelloWorld"
    filter "configurations:Release"
       defines { "NDEBUG" }
       optimize "On"
+   
+   configuration "macosx"
+      links {"Cocoa.framework"}

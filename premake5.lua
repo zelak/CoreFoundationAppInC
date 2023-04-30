@@ -19,3 +19,4 @@ project "HelloWorld"
    
    configuration "macosx"
       links {"Cocoa.framework"}
+      buildoptions {"-DOBJC_OLD_DISPATCH_PROTOTYPES"}
